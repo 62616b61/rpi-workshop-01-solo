@@ -24,6 +24,7 @@ board.on('ready', () => {
       reset: 'P1-7'
     }
   })
+  register.reset()
 
   const matrix = new Matrix(register)
 })
