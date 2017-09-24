@@ -1,3 +1,3 @@
-## Step 2
+## Step 3
 
-joystick + basic game world
+the snake game
