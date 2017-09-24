@@ -1,3 +1,3 @@
-## Step 1
+## Step 3
 
-shift registers + matrix
+joystick + basic game world
