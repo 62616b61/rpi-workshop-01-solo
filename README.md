@@ -1,3 +1,3 @@
-## Step 3
+## Step 2
 
 joystick + basic game world
