@@ -4,6 +4,7 @@ module.exports = class Snake {
 
     this.worldSize = 8
     this.snake = {x: 4, y: 4}
+    this.speed = {x: 0, y: 0}
 
     this.subscribe()
     this.loop()
@@ -16,8 +17,8 @@ module.exports = class Snake {
   }
 
   updateSnake () {
-    const nextPosX = this.snake[0].x + this.speed.x
-    const nextPosY = this.snake[0].y + this.speed.y
+    const nextPosX = this.snake.x + this.speed.x
+    const nextPosY = this.snake.y + this.speed.y
 
     if (nextPosX >= 0 && nextPosX < this.worldSize &&
       nextPosY >= 0 && nextPosY < this.worldSize) {

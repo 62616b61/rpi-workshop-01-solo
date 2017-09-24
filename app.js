@@ -30,6 +30,7 @@ board.on('ready', () => {
       reset: 'P1-7'
     }
   })
+  register.reset()
 
   const snake = new Snake(events)
   const matrix = new Matrix(events, register)
