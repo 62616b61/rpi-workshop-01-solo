@@ -1,7 +1,8 @@
 const invert = bits => bits.map(bit => bit === 0 ? 1 : 0)
 
 module.exports = class Matrix {
-  constructor (register) {
+  constructor (events, register) {
+    this.events = events
     this.register = register
 
     this.picture = [
@@ -15,6 +16,7 @@ module.exports = class Matrix {
       [1, 1, 1, 1, 1, 1, 1, 1],
     ]
 
+    this.subscribe()
     this.display()
   }
 
@@ -56,5 +58,9 @@ module.exports = class Matrix {
       parseInt( result_p2.join('') , 2),
       parseInt( result_p1.join('') , 2)
     ]
+  }
+
+  subscribe () {
+    this.events.on('display', (picture) => this.setPicture(picture))
   }
 }
