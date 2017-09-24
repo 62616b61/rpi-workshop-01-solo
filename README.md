@@ -1,3 +1,3 @@
 ## Step 1
 
-work in progress
+shift registers + matrix
