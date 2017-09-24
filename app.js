@@ -4,7 +4,14 @@ const five = require('johnny-five')
 const Matrix = require('./src/Matrix')
 
 const board = new five.Board({
-  io: new Raspi()
+  io: new Raspi({
+    excludePins: [
+      'P1-19',
+      'P1-21',
+      'P1-23',
+      'P1-24'
+    ]
+  })
 })
 
 board.on('ready', () => {
